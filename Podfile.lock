@@ -1,0 +1,26 @@
+PODS:
+  - Realm (5.3.6):
+    - Realm/Headers (= 5.3.6)
+  - Realm/Headers (5.3.6)
+  - RealmSwift (5.3.6):
+    - Realm (= 5.3.6)
+  - UnsplashPhotoPicker (1.1.1)
+
+DEPENDENCIES:
+  - RealmSwift (= 5.3.6)
+  - UnsplashPhotoPicker (~> 1.1.1)
+
+SPEC REPOS:
+  trunk:
+    - Realm
+    - RealmSwift
+    - UnsplashPhotoPicker
+
+SPEC CHECKSUMS:
+  Realm: cd400dd7e5b5bb5c8ae9842eecd73792369e6ec0
+  RealmSwift: 99a16dbdee5d6dfb3d91d56088a9f8c15c0871d1
+  UnsplashPhotoPicker: 86520e34cfded8fb4a41910bf87afe571906b4e3
+
+PODFILE CHECKSUM: ff2f0fcf39c26760ed73db43a54ec563f9a5086f
+
+COCOAPODS: 1.9.1
