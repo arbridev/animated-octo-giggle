@@ -61,6 +61,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Home" id="sg0-rH-ZTl"/>
                     <connections>
+                        <outlet property="photoTable" destination="vjl-M4-Mgn" id="IOd-Qj-XC2"/>
                         <segue destination="ovC-tg-eFE" kind="show" identifier="UserVC" id="QAJ-y4-QoH"/>
                     </connections>
                 </viewController>
@@ -101,6 +102,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Favorites" id="Mo4-R5-IL8"/>
                     <connections>
+                        <outlet property="photoTable" destination="bYh-Ao-sfW" id="Xf5-cW-BVj"/>
                         <segue destination="9HL-I8-wya" kind="show" identifier="HomeVC" id="HYE-0G-mQc"/>
                         <segue destination="ovC-tg-eFE" kind="show" identifier="UserVC" id="2wA-ME-k9A"/>
                     </connections>
@@ -115,6 +117,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="bUJ-7u-z0N" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AMK-Lv-fNQ">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -159,6 +162,9 @@
                         <viewLayoutGuide key="safeArea" id="u0o-D4-kr3"/>
                     </view>
                     <navigationItem key="navigationItem" id="JOC-D7-9Cc"/>
+                    <connections>
+                        <outlet property="photo" destination="Luo-Tf-5W8" id="zwC-yp-asM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVR-SP-sYd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,6 +222,11 @@
                         <viewLayoutGuide key="safeArea" id="tmD-SL-tJ1"/>
                     </view>
                     <navigationItem key="navigationItem" id="WDc-Df-7mm"/>
+                    <connections>
+                        <outlet property="photoTable" destination="HlT-78-jRz" id="sT0-MT-tOa"/>
+                        <outlet property="userImage" destination="Zua-ff-NV0" id="Vs5-st-0bY"/>
+                        <outlet property="username" destination="w7F-ap-zhg" id="QjZ-Dw-TiJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EAo-9u-8pA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

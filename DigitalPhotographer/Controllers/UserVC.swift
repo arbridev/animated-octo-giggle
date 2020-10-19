@@ -10,6 +10,10 @@ import UIKit
 
 class UserVC: UIViewController {
 
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var photoTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

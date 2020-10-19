@@ -8,6 +8,7 @@ target 'DigitalPhotographer' do
   # Pods for DigitalPhotographer
   pod 'UnsplashPhotoPicker', '~> 1.1.1'
   pod 'RealmSwift', '5.3.6'
+  pod 'Alamofire', '~> 5.2'
 
   target 'DigitalPhotographerTests' do
     inherit! :search_paths

@@ -10,6 +10,8 @@ import UIKit
 
 class FavoritesVC: UIViewController {
 
+    @IBOutlet weak var photoTable: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

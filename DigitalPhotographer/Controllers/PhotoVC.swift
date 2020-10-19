@@ -10,6 +10,8 @@ import UIKit
 
 class PhotoVC: UIViewController {
 
+    @IBOutlet weak var photo: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
