@@ -13,12 +13,14 @@ class HomeVC: UIViewController {
     let network = UnsplashAPIHandler()
     let cellIdentifier = "PhotoTableCell"
     var photos: Photos?
-    
+    var imageCache: ImageCache!
 
     @IBOutlet weak var photoTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        imageCache = ImageCache()
         
         photoTable.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         photoTable.dataSource = self
@@ -53,10 +55,10 @@ extension HomeVC: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier) as! PhotoTableCell
         if let photos = self.photos {
             let photo = photos[indexPath.row]
-            cell.photo.downloadImageFrom(link: photo.urls.full, contentMode: .scaleAspectFill)
             cell.likes.text = "\(photo.likes)"
             cell.username.text = photo.user.name
-            cell.userimage.downloadImageFrom(link: photo.user.profileImage.medium, contentMode: .scaleAspectFit)
+            cell.photo.downloadImageFrom(link: photo.urls.full, cache: imageCache, contentMode: .scaleAspectFill)
+            cell.userimage.downloadImageFrom(link: photo.user.profileImage.medium, cache: imageCache, contentMode: .scaleAspectFit)
         }
         return cell
     }
