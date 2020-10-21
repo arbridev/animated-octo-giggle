@@ -8,7 +8,16 @@
 
 import UIKit
 
+protocol PhotoTableCellDelegate {
+    func goToPhoto(indexPath: IndexPath)
+    func goToUser(indexPath: IndexPath)
+    func setFavorite(indexPath: IndexPath)
+}
+
 class PhotoTableCell: UITableViewCell {
+    
+    var indexPath: IndexPath!
+    var delegate: PhotoTableCellDelegate?
 
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var likes: UILabel!
@@ -38,6 +47,20 @@ class PhotoTableCell: UITableViewCell {
         likes.text = nil
         username.text = nil
         userimage.image = nil
+        indexPath = nil
+        delegate = nil
+    }
+    
+    @IBAction func goToPhoto(_ sender: UIButton) {
+        delegate?.goToPhoto(indexPath: indexPath)
+    }
+    
+    @IBAction func goToUser(_ sender: UIButton) {
+        delegate?.goToUser(indexPath: indexPath)
+    }
+    
+    @IBAction func setFavorite(_ sender: UIButton) {
+        delegate?.setFavorite(indexPath: indexPath)
     }
     
 }

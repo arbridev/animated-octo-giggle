@@ -7,20 +7,18 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeVC: UIViewController {
     
     let network = UnsplashAPIHandler()
     let cellIdentifier = "PhotoTableCell"
     var photos: Photos?
-    var imageCache: ImageCache!
 
     @IBOutlet weak var photoTable: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        imageCache = ImageCache()
         
         photoTable.register(UINib(nibName: cellIdentifier, bundle: nil), forCellReuseIdentifier: cellIdentifier)
         photoTable.dataSource = self
@@ -57,8 +55,10 @@ extension HomeVC: UITableViewDataSource {
             let photo = photos[indexPath.row]
             cell.likes.text = "\(photo.likes)"
             cell.username.text = photo.user.name
-            cell.photo.downloadImageFrom(link: photo.urls.full, cache: imageCache, contentMode: .scaleAspectFill)
-            cell.userimage.downloadImageFrom(link: photo.user.profileImage.medium, cache: imageCache, contentMode: .scaleAspectFit)
+            cell.photo.kf.setImage(with: URL(string: photo.urls.full))
+            cell.userimage.kf.setImage(with: URL(string: photo.user.profileImage.medium))
+            cell.indexPath = indexPath
+            cell.delegate = self
         }
         return cell
     }
@@ -66,5 +66,23 @@ extension HomeVC: UITableViewDataSource {
 }
 
 extension HomeVC: UITableViewDelegate {
+    
+}
+
+extension HomeVC: PhotoTableCellDelegate {
+    
+    func goToPhoto(indexPath: IndexPath) {
+        print("goToPhoto", indexPath)
+        self.performSegue(withIdentifier: "PhotoVC", sender: photos![indexPath.row])
+    }
+    
+    func goToUser(indexPath: IndexPath) {
+        print("goToUser", indexPath)
+        self.performSegue(withIdentifier: "UserVC", sender: photos![indexPath.row])
+    }
+    
+    func setFavorite(indexPath: IndexPath) {
+        print("setFavorite", indexPath)
+    }
     
 }
