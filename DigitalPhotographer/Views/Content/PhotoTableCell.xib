@@ -25,20 +25,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KVd-1l-qAO">
-                                <rect key="frame" x="8" y="5" width="30" height="30"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like" translatesAutoresizingMaskIntoConstraints="NO" id="KVd-1l-qAO">
+                                <rect key="frame" x="13" y="10" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="5Xk-E2-bqA"/>
-                                    <constraint firstAttribute="height" constant="30" id="KRb-Jp-UjB"/>
+                                    <constraint firstAttribute="width" constant="20" id="5Xk-E2-bqA"/>
+                                    <constraint firstAttribute="height" constant="20" id="KRb-Jp-UjB"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" horizontalCompressionResistancePriority="600" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMe-7W-9Le">
-                                <rect key="frame" x="45.5" y="10" width="30" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" horizontalCompressionResistancePriority="600" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMe-7W-9Le">
+                                <rect key="frame" x="45.5" y="12.5" width="25" height="25"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="8NR-bt-7kz"/>
-                                    <constraint firstAttribute="width" constant="30" id="ITC-X1-r3V"/>
+                                    <constraint firstAttribute="height" constant="25" id="8NR-bt-7kz"/>
+                                    <constraint firstAttribute="width" constant="25" id="ITC-X1-r3V"/>
                                 </constraints>
-                                <state key="normal" title="Fav"/>
+                                <state key="normal" image="heart"/>
                                 <connections>
                                     <action selector="setFavorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="XDf-iL-ejL"/>
                                 </connections>
@@ -51,13 +51,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aI-tx-tZo">
-                                <rect key="frame" x="95.5" y="5" width="324.5" height="40"/>
+                                <rect key="frame" x="90.5" y="5" width="329.5" height="40"/>
                                 <connections>
                                     <action selector="goToUser:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6w5-kx-OkS"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgC-PC-uL2">
-                                <rect key="frame" x="95.5" y="18" width="37.5" height="14"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgC-PC-uL2">
+                                <rect key="frame" x="90.5" y="18" width="71" height="14"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -80,7 +80,7 @@
                             <constraint firstAttribute="bottom" secondItem="ibd-L3-tRv" secondAttribute="bottom" constant="5" id="tFk-LB-HS6"/>
                             <constraint firstItem="CgC-PC-uL2" firstAttribute="centerY" secondItem="pcA-LV-dBp" secondAttribute="centerY" id="vHl-TG-UPK"/>
                             <constraint firstItem="kMe-7W-9Le" firstAttribute="centerY" secondItem="pcA-LV-dBp" secondAttribute="centerY" id="zBu-VV-31B"/>
-                            <constraint firstItem="KVd-1l-qAO" firstAttribute="top" secondItem="pcA-LV-dBp" secondAttribute="top" constant="5" id="zC3-I5-1CH"/>
+                            <constraint firstItem="KVd-1l-qAO" firstAttribute="top" secondItem="pcA-LV-dBp" secondAttribute="top" constant="10" id="zC3-I5-1CH"/>
                         </constraints>
                     </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="2uy-Ri-Fwx">
@@ -121,4 +121,8 @@
             <point key="canvasLocation" x="126.08695652173914" y="141.29464285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="heart" width="50" height="50"/>
+        <image name="like" width="50" height="50"/>
+    </resources>
 </document>

@@ -51,6 +51,14 @@ class PhotoTableCell: UITableViewCell {
         delegate = nil
     }
     
+    func isFavorite(_ fav: Bool) {
+        if fav {
+            self.favoriteBtn.setImage(UIImage(named: "heartfilled"), for: .normal)
+        } else {
+            self.favoriteBtn.setImage(UIImage(named: "heart"), for: .normal)
+        }
+    }
+    
     @IBAction func goToPhoto(_ sender: UIButton) {
         delegate?.goToPhoto(indexPath: indexPath)
     }

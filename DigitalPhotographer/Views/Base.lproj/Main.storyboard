@@ -46,20 +46,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vjl-M4-Mgn">
-                                <rect key="frame" x="20" y="64" width="374" height="729"/>
+                                <rect key="frame" x="20" y="64" width="374" height="749"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="hVG-vt-LnE" firstAttribute="trailing" secondItem="vjl-M4-Mgn" secondAttribute="trailing" constant="20" id="7aV-Rw-BMC"/>
-                            <constraint firstItem="hVG-vt-LnE" firstAttribute="bottom" secondItem="vjl-M4-Mgn" secondAttribute="bottom" constant="20" id="8Cy-pJ-7wh"/>
+                            <constraint firstItem="hVG-vt-LnE" firstAttribute="bottom" secondItem="vjl-M4-Mgn" secondAttribute="bottom" id="8Cy-pJ-7wh"/>
                             <constraint firstItem="vjl-M4-Mgn" firstAttribute="top" secondItem="hVG-vt-LnE" secondAttribute="top" constant="20" id="AY2-Jl-Koj"/>
                             <constraint firstItem="vjl-M4-Mgn" firstAttribute="leading" secondItem="hVG-vt-LnE" secondAttribute="leading" constant="20" id="bXI-ff-fWm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hVG-vt-LnE"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="sg0-rH-ZTl"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" id="sg0-rH-ZTl">
+                        <inset key="imageInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="photoTable" destination="vjl-M4-Mgn" id="IOd-Qj-XC2"/>
                         <segue destination="ovC-tg-eFE" kind="show" identifier="UserVC" id="QAJ-y4-QoH"/>
@@ -101,7 +103,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="49b-MA-8UB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorites" id="Mo4-R5-IL8"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="heartblue" id="Mo4-R5-IL8">
+                        <inset key="imageInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="photoTable" destination="bYh-Ao-sfW" id="Xf5-cW-BVj"/>
                         <segue destination="9HL-I8-wya" kind="show" identifier="HomeVC" id="HYE-0G-mQc"/>
@@ -237,6 +241,10 @@
             <point key="canvasLocation" x="3090" y="-239"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heartblue" width="50" height="50"/>
+        <image name="home" width="50" height="50"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QAJ-y4-QoH"/>
         <segue reference="qZJ-U5-YVe"/>
