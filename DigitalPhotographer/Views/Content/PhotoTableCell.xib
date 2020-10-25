@@ -12,7 +12,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PhotoTableCell" id="KGk-i7-Jjw" customClass="PhotoTableCell" customModule="DigitalPhotographer" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="430" height="250"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="430" height="250"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -33,10 +33,10 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="200" horizontalCompressionResistancePriority="600" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kMe-7W-9Le">
-                                <rect key="frame" x="45.5" y="12.5" width="25" height="25"/>
+                                <rect key="frame" x="55.5" y="15" width="20" height="20"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="25" id="8NR-bt-7kz"/>
-                                    <constraint firstAttribute="width" constant="25" id="ITC-X1-r3V"/>
+                                    <constraint firstAttribute="height" constant="20" id="8NR-bt-7kz"/>
+                                    <constraint firstAttribute="width" constant="20" id="ITC-X1-r3V"/>
                                 </constraints>
                                 <state key="normal" image="heart"/>
                                 <connections>
@@ -51,13 +51,13 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0aI-tx-tZo">
-                                <rect key="frame" x="90.5" y="5" width="329.5" height="40"/>
+                                <rect key="frame" x="95.5" y="5" width="324.5" height="40"/>
                                 <connections>
                                     <action selector="goToUser:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="6w5-kx-OkS"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgC-PC-uL2">
-                                <rect key="frame" x="90.5" y="18" width="71" height="14"/>
+                                <rect key="frame" x="95.5" y="18" width="71" height="14"/>
                                 <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="14"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -67,7 +67,7 @@
                         <constraints>
                             <constraint firstItem="KVd-1l-qAO" firstAttribute="centerX" secondItem="ibd-L3-tRv" secondAttribute="centerX" id="0v5-op-snC"/>
                             <constraint firstAttribute="bottom" secondItem="0aI-tx-tZo" secondAttribute="bottom" constant="5" id="5GQ-In-Pwt"/>
-                            <constraint firstItem="kMe-7W-9Le" firstAttribute="leading" secondItem="ibd-L3-tRv" secondAttribute="trailing" constant="10" id="D7q-53-JLx"/>
+                            <constraint firstItem="kMe-7W-9Le" firstAttribute="leading" secondItem="ibd-L3-tRv" secondAttribute="trailing" constant="20" id="D7q-53-JLx"/>
                             <constraint firstItem="0aI-tx-tZo" firstAttribute="top" secondItem="pcA-LV-dBp" secondAttribute="top" constant="5" id="Ru1-dz-DOn"/>
                             <constraint firstItem="ibd-L3-tRv" firstAttribute="leading" secondItem="pcA-LV-dBp" secondAttribute="leading" constant="10" id="ana-9u-TAt"/>
                             <constraint firstAttribute="trailing" secondItem="qNr-bF-3gt" secondAttribute="trailing" constant="10" id="cdK-s2-XY2"/>
@@ -90,7 +90,7 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="igL-wu-iGc">
-                        <rect key="frame" x="0.0" y="0.0" width="430" height="200"/>
+                        <rect key="frame" x="0.0" y="2" width="430" height="198"/>
                         <connections>
                             <action selector="goToPhoto:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="1Zc-YE-G3J"/>
                         </connections>
@@ -100,12 +100,12 @@
                     <constraint firstItem="pcA-LV-dBp" firstAttribute="top" secondItem="2uy-Ri-Fwx" secondAttribute="bottom" id="5JL-CO-D44"/>
                     <constraint firstAttribute="trailing" secondItem="pcA-LV-dBp" secondAttribute="trailing" id="98i-KV-M5H"/>
                     <constraint firstItem="2uy-Ri-Fwx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ApW-1q-PeM"/>
-                    <constraint firstItem="igL-wu-iGc" firstAttribute="top" secondItem="2uy-Ri-Fwx" secondAttribute="top" id="SiA-j6-Ngo"/>
+                    <constraint firstItem="igL-wu-iGc" firstAttribute="top" secondItem="2uy-Ri-Fwx" secondAttribute="top" constant="2" id="SiA-j6-Ngo"/>
                     <constraint firstItem="igL-wu-iGc" firstAttribute="bottom" secondItem="2uy-Ri-Fwx" secondAttribute="bottom" id="VSg-FW-SNB"/>
                     <constraint firstItem="2uy-Ri-Fwx" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YEh-2a-EQa"/>
                     <constraint firstItem="igL-wu-iGc" firstAttribute="trailing" secondItem="2uy-Ri-Fwx" secondAttribute="trailing" id="YfP-Pb-oia"/>
                     <constraint firstItem="pcA-LV-dBp" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="dvp-CU-tBa"/>
-                    <constraint firstAttribute="bottom" secondItem="pcA-LV-dBp" secondAttribute="bottom" id="iyn-4U-iju"/>
+                    <constraint firstAttribute="bottom" secondItem="pcA-LV-dBp" secondAttribute="bottom" constant="2" id="iyn-4U-iju"/>
                     <constraint firstAttribute="trailing" secondItem="2uy-Ri-Fwx" secondAttribute="trailing" id="kqt-oo-Pop"/>
                     <constraint firstItem="igL-wu-iGc" firstAttribute="leading" secondItem="2uy-Ri-Fwx" secondAttribute="leading" id="uHN-Md-hY3"/>
                 </constraints>

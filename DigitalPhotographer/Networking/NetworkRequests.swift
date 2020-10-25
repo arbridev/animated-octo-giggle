@@ -46,6 +46,7 @@ struct NetworkRequests {
                         completion(String(decoding: response.data ?? Data(), as: UTF8.self), object, nil)
                     } catch {
                         print(error)
+                        completion("Response: " + String(describing: response), nil, APIError(error: error, statusCode: response.response?.statusCode))
                     }
                 case .failure(let error):
                     completion("Response: " + String(describing: response), nil, APIError(error: error, statusCode: response.response?.statusCode))
